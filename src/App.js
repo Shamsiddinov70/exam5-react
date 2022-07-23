@@ -1,12 +1,13 @@
 import { useState } from 'react';
 import './App.css';
 import LoginForm from './components/LoginForm';
+import Posts from './components/posts';
 
 function App() {
 
   const adminUser = {
-    email: "engineer@gmail.com",
-    password: "abbos7"
+    email: "eve.holt@reqres.in",
+    password: "7"
   }
 
   const [user, setUser] = useState({ name: "", email: "" });
@@ -21,9 +22,11 @@ function App() {
         name: details.name,
         email: details.email
       })
+
+      localStorage.setItem('token', JSON.stringify(details));
     }
     else {
-      setError("Details do not match");
+      setError(`Xato ma'lumot😒`);
     }
   };
 
@@ -35,7 +38,7 @@ function App() {
     <div className="App">
       {(user.email !== "") ? (
         <div className='mt-5'>
-          <h2 className='mb-5'>Welcome, <span>{user.name}</span></h2>
+          <Posts />
           <button className='btn btn-danger' onClick={Logout}>Logout</button>
         </div>
       ) : (
