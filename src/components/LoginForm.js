@@ -12,7 +12,7 @@ function LoginForm({ Login, error }) {
     }
 
     return (
-        <>
+        <div className='container'>
             <Link to={'/'}><img src={Logo} alt="site-logo" className="site-logo" width={209} height={58} /></Link>
             <form onSubmit={submitHandler}>
                 <div style={{
@@ -35,7 +35,7 @@ function LoginForm({ Login, error }) {
                     <button className='submit-btn' type='submit' value="LOGIN">Submit</button>
                 </div>
             </form >
-        </>
+        </div>
     )
 }
 
