@@ -5,6 +5,11 @@ import { Link } from "react-router-dom"
 // import Developers from "../assets/images/developers.jpg"
 
 function All() {
+
+    const handleChangerSide = () => {
+        console.log('hey');
+    }
+
     const [posts, setPosts] = useState([]);
 
     useEffect(() => {
@@ -33,9 +38,7 @@ function All() {
                             <span className='span-subtitle'>Design theory</span>
                         </div>
                         <li className='list-unstyled mb-3'>
-                            <Link className='title' to="/comment" key={post.id}>{post.title}</Link>
-                            {/* <Comment /> */}
-                            {/* <Link className='' to="/" key={post.userid}>{post.body}</Link> */}
+                            <Link onClick={handleChangerSide} className='title' to="/comment" key={post.id}>{post.title}</Link>
                         </li>
 
                         <div className='d-flex align-items-center mb-3'>
