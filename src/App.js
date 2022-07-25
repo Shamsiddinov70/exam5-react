@@ -62,7 +62,7 @@ function App() {
             </div>
           </div>
 
-          <button title='Logout' className='logout-btn btn btn-outline-danger' onClick={Logout}>out</button>
+          <button title='Logout' className='logout-btn btn btn-outline-danger me-1' onClick={Logout}>out</button>
         </div>
       ) : (
         <LoginForm Login={Login} error={error} />

@@ -115,11 +115,10 @@
 }
 
 .logout-btn {
-  width: 35px;
   height: 40px;
   margin-top: 26px;
   text-align: center;
-  padding: 0px;
+  padding: 2px;
 }
 
 .search-inp {
