@@ -2,7 +2,11 @@ import React from 'react'
 
 function Ux() {
     return (
-        <div>Ux</div>
+        <div>
+            <h1>
+                UX
+            </h1>
+        </div>
     )
 }
 

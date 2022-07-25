@@ -2,7 +2,11 @@ import React from 'react'
 
 function Design() {
     return (
-        <div>design</div>
+        <div>
+            <h1>
+                DESIGN
+            </h1>
+        </div>
     )
 }
 

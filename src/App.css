@@ -211,6 +211,45 @@
   margin-bottom: 20px;
 }
 
+.footer {
+  margin-top: 220px;
+  background: #000000;
+  padding-top: 40px;
+  padding-bottom: 30px;
+}
+
+/* .footer-logo {
+  margin-top: -170px;
+} */
+
+.footer-row1 {
+  margin-right: 100px;
+}
+
+.footer-row2 {
+  margin-right: 100px;
+}
+
+.footer-title {
+  font-family: 'Segoe UI';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 27px;
+  color: #FFFFFF;
+  margin-bottom: 14px;
+}
+
+.footer-link {
+  font-family: 'Segoe UI';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  color: #FFFFFF;
+  margin-bottom: 15px;
+}
+
 
 /* 404 page*/
 /* html, */

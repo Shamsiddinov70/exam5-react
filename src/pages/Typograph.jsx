@@ -2,7 +2,9 @@ import React from 'react'
 
 function Typograph() {
     return (
-        <div>Typograph</div>
+        <div>
+            <h1>Typograph</h1>
+        </div>
     )
 }
 

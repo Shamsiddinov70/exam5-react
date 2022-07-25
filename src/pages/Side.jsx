@@ -23,16 +23,16 @@ function Side() {
                 </p>
                 <ul className='side-icons d-flex'>
                     <li>
-                        <Link to='/'><img src={Facebook} alt="side-icon" className="aside-icon" width={10} height={18} /></Link>
+                        <Link to='/not'><img src={Facebook} alt="side-icon" className="aside-icon" width={10} height={18} /></Link>
                     </li>
                     <li>
-                        <Link to='/'><img src={Github} alt="side-icon" className="aside-icon" width={20} height={19} /></Link>
+                        <Link to='/not'><img src={Github} alt="side-icon" className="aside-icon" width={20} height={19} /></Link>
                     </li>
                     <li>
-                        <Link to='/'><img src={Twitter} alt="side-icon" className="aside-icon" width={20} height={17} /></Link>
+                        <Link to='/not'><img src={Twitter} alt="side-icon" className="aside-icon" width={20} height={17} /></Link>
                     </li>
                     <li>
-                        <Link to='/'><img src={Linkedin} alt="side-icon" className="aside-icon" width={17} height={17} /></Link>
+                        <Link to='/not'><img src={Linkedin} alt="side-icon" className="aside-icon" width={17} height={17} /></Link>
                     </li>
                 </ul>
             </aside>

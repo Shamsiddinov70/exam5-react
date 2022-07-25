@@ -10,6 +10,7 @@ import Typograph from './pages/Typograph';
 import Ui from './pages/Ui';
 import Ux from './pages/Ux';
 import Unfind from './pages/Unfind';
+import Footer from './pages/Footer';
 
 function App() {
 
@@ -45,24 +46,26 @@ function App() {
   return (
     <div className="App">
       {(user.email !== "") ? (
-        <div className='container d-flex'>
-          <div className='d-flex'>
-            <Side />
-            <div>
-              <Header />
-              <Routes>
-                <Route path='/' element={<All />} />
-                <Route path='/all' element={<All />} />
-                <Route path='/design' element={<Design />} />
-                <Route path='/ux' element={<Ux />} />
-                <Route path='/ui' element={<Ui />} />
-                <Route path='/typo' element={<Typograph />} />
-                <Route path='*' element={<Unfind />} />
-              </Routes>
+        <div>
+          <div className='container'>
+            <div className='d-flex'>
+              <Side />
+              <div>
+                <Header />
+                <Routes>
+                  <Route path='/' element={<All />} />
+                  <Route path='/all' element={<All />} />
+                  <Route path='/design' element={<Design />} />
+                  <Route path='/ux' element={<Ux />} />
+                  <Route path='/ui' element={<Ui />} />
+                  <Route path='/typo' element={<Typograph />} />
+                  <Route path='*' element={<Unfind />} />
+                </Routes>
+              </div>
+              <button title='Logout' className='logout-btn btn btn-outline-danger me-1' onClick={Logout}>out</button>
             </div>
           </div>
-
-          <button title='Logout' className='logout-btn btn btn-outline-danger me-1' onClick={Logout}>out</button>
+          <Footer />
         </div>
       ) : (
         <LoginForm Login={Login} error={error} />
