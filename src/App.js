@@ -11,6 +11,7 @@ import Ui from './pages/Ui';
 import Ux from './pages/Ux';
 import Unfind from './pages/Unfind';
 import Footer from './pages/Footer';
+import Comment from './pages/Comment';
 
 function App() {
 
@@ -60,9 +61,14 @@ function App() {
                   <Route path='/ui' element={<Ui />} />
                   <Route path='/typo' element={<Typograph />} />
                   <Route path='*' element={<Unfind />} />
+
+                  {/* <Routes> */}
+                  <Route path='/comment' element={<Comment />} />
+                  {/* </Routes> */}
                 </Routes>
+
               </div>
-              <button title='Logout' className='logout-btn btn btn-outline-danger me-1' onClick={Logout}>out</button>
+              <button title='Logout' className='logout-btn btn btn-danger me-1' onClick={Logout}>out</button>
             </div>
           </div>
           <Footer />

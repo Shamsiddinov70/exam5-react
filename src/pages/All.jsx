@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Clock from "../assets/images/clock.svg"
 import { Link } from "react-router-dom"
+// import Comment from './Comment';
 // import Developers from "../assets/images/developers.jpg"
 
 function All() {
@@ -19,7 +20,7 @@ function All() {
             setPosts(data)
         })()
     }, [])
-    console.log(posts);
+    // console.log(posts);
 
     return (
         <div className='posts'>
@@ -32,7 +33,9 @@ function All() {
                             <span className='span-subtitle'>Design theory</span>
                         </div>
                         <li className='list-unstyled mb-3'>
-                            <Link className='title' to="/" key={post.userid}>{post.title}</Link>
+                            <Link className='title' to="/comment" key={post.id}>{post.title}</Link>
+                            {/* <Comment /> */}
+                            {/* <Link className='' to="/" key={post.userid}>{post.body}</Link> */}
                         </li>
 
                         <div className='d-flex align-items-center mb-3'>
@@ -41,16 +44,6 @@ function All() {
                         </div>
                     </div>
                 ))}
-            </div>
-            <div className="body">
-                {/* <img src={Developers} alt='team img' width={400} height={736} /> */}
-                {/* <p>body</p> */}
-                {/* {posts.map(post => (
-                    <li className='list-unstyled'>
-                        <h3 key={post.id}>{post.title}</h3>
-                        <p>{post.body}</p>
-                    </li>
-                ))} */}
             </div>
         </div>
     )

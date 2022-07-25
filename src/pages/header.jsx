@@ -3,6 +3,12 @@ import { NavLink } from 'react-router-dom'
 import Search from "../assets/images/search.svg"
 
 function Header() {
+
+    // const handleInput = (e) => {
+    //     e.preventDefault()
+    //     console.log(e.target.value);
+    // }
+
     return (
         <div className='d-flex align-items-center header'>
             <ul>
