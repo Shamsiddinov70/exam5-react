@@ -24,42 +24,44 @@ function Side() {
             <div className='aside'>
                 <Link to='/all'><img src={Logo} alt="site-logo" className="aside-logo site-logo" width={209} height={58} /></Link>
 
-                <div className='aside-comment'>
-                    <div className='d-flex flex-column align-items-center mb-5'>
-                        <button onClick={handleCounter} className='btn mb-1'><img src={Clap} alt='clap-icon' width={18} height={19} />
-                        </button>
-                        <span>{count}</span>
+                <div className=''>
+                    <div className='aside-main'>
+                        <h6 className='aside-title'>
+                            What I do!
+                        </h6>
+                        <p className='aside-text'>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer aliquet, orci in bibendum luctus, turpis ante pretium velit, eu rutrum augue erat ac eros. Cras ultricies mattis convallis.
+                        </p>
+                        <p className='header-subtext'>
+                            EXPLORE ME
+                        </p>
+                        <ul className='side-icons d-flex'>
+                            <li>
+                                <Link to='/not'><img src={Facebook} alt="side-icon" className="aside-icon" width={10} height={18} /></Link>
+                            </li>
+                            <li>
+                                <Link to='/not'><img src={Github} alt="side-icon" className="aside-icon" width={20} height={19} /></Link>
+                            </li>
+                            <li>
+                                <Link to='/not'><img src={Twitter} alt="side-icon" className="aside-icon" width={20} height={17} /></Link>
+                            </li>
+                            <li>
+                                <Link to='/not'><img src={Linkedin} alt="side-icon" className="aside-icon" width={17} height={17} /></Link>
+                            </li>
+                        </ul>
                     </div>
-                    <div className='d-flex flex-column align-items-center'>
-                        <img className='mb-2' src={Share} alt='share-icon' width={18} height={19} />
-                        <span>70</span>
-                    </div>
-                </div>
 
-                <div className='aside-main'>
-                    <h6 className='aside-title'>
-                        What I do!
-                    </h6>
-                    <p className='aside-text'>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer aliquet, orci in bibendum luctus, turpis ante pretium velit, eu rutrum augue erat ac eros. Cras ultricies mattis convallis.
-                    </p>
-                    <p className='header-subtext'>
-                        EXPLORE ME
-                    </p>
-                    <ul className='side-icons d-flex'>
-                        <li>
-                            <Link to='/not'><img src={Facebook} alt="side-icon" className="aside-icon" width={10} height={18} /></Link>
-                        </li>
-                        <li>
-                            <Link to='/not'><img src={Github} alt="side-icon" className="aside-icon" width={20} height={19} /></Link>
-                        </li>
-                        <li>
-                            <Link to='/not'><img src={Twitter} alt="side-icon" className="aside-icon" width={20} height={17} /></Link>
-                        </li>
-                        <li>
-                            <Link to='/not'><img src={Linkedin} alt="side-icon" className="aside-icon" width={17} height={17} /></Link>
-                        </li>
-                    </ul>
+                    <div className='aside-comment d-flex align-items-center justify-content-start mt-5'>
+                        <div className='d-flex flex-column align-items-center mb-5 me-5'>
+                            <button onClick={handleCounter} className='btn mb-1'><img src={Clap} alt='clap-icon' width={18} height={19} />
+                            </button>
+                            <span>{count}</span>
+                        </div>
+                        <div className='d-flex flex-column align-items-center mb-5 mt-2'>
+                            <img className='mb-2' src={Share} alt='share-icon' width={18} height={19} />
+                            <span>70</span>
+                        </div>
+                    </div>
                 </div>
             </div>
 

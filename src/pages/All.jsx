@@ -10,7 +10,7 @@ function All() {
 
     useEffect(() => {
         (async function () {
-            const res = await fetch('https://jsonplaceholder.typicode.com/posts')
+            const res = await fetch(`https://jsonplaceholder.typicode.com/posts`)
             console.log(res);
 
             if (!res.ok) {
@@ -33,8 +33,8 @@ function All() {
                             <span className='me-auto span-date'>September 24.2020</span>
                             <span className='span-subtitle'>Design theory</span>
                         </div>
-                        <li className='list-unstyled mb-3'>
-                            <Link className='title' to="/comment" key={post.id}>{post.title}</Link>
+                        <li className='list-unstyled mb-3' key={post.id}>
+                            <Link className='title' to={`/post/${post.id}`}>{post.title}</Link>
                         </li>
 
                         <div className='d-flex align-items-center mb-3'>
@@ -44,7 +44,7 @@ function All() {
                     </div>
                 ))}
             </div>
-        </div>
+        </div >
     )
 }
 

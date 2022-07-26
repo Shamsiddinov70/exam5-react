@@ -16,8 +16,8 @@ import Comment from './pages/Comment';
 function App() {
 
   const adminUser = {
-    email: "eve.holt@reqres.in",
-    password: ""
+    email: "dev@gmail.com",
+    password: "1"
   }
 
   const [user, setUser] = useState({ name: "", email: "" });
@@ -63,7 +63,7 @@ function App() {
                   <Route path='*' element={<Unfind />} />
 
                   {/* <Routes> */}
-                  <Route path='/comment' element={<Comment />} />
+                  <Route path={`/post/:postId`} element={<Comment />} />
                   {/* </Routes> */}
                 </Routes>
 
