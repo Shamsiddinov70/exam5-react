@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import Logo from "../assets/images/bobur-logo.svg"
 import Facebook from "../assets/images/side-facebook.svg"
@@ -9,7 +9,15 @@ import Clap from "../assets/images/clap.svg"
 import Share from "../assets/images/share.svg"
 
 
+
 function Side() {
+
+    const [count, seetCount] = useState(175)
+
+    const handleCounter = () => {
+        // console.log('count');
+        seetCount(count + 1);
+    }
 
     return (
         <>
@@ -18,9 +26,9 @@ function Side() {
 
                 <div className='aside-comment'>
                     <div className='d-flex flex-column align-items-center mb-5'>
-                        <button className='btn mb-1'><img src={Clap} alt='clap-icon' width={18} height={19} />
+                        <button onClick={handleCounter} className='btn mb-1'><img src={Clap} alt='clap-icon' width={18} height={19} />
                         </button>
-                        <span>175</span>
+                        <span>{count}</span>
                     </div>
                     <div className='d-flex flex-column align-items-center'>
                         <img className='mb-2' src={Share} alt='share-icon' width={18} height={19} />

@@ -67,12 +67,12 @@
 }
 
 .aside-main {
-  /* display: none; */
+  display: none;
 }
 
 .aside-comment {
   width: 328px;
-  display: none;
+  /* display: none; */
 }
 
 .aside-logo {
@@ -100,6 +100,34 @@
   color: #474747;
   width: 328px;
   margin-bottom: 28px;
+}
+
+.comment {
+  font-family: 'Roboto Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+  color: #474747;
+  margin-bottom: 80px;
+}
+
+.comment-subtitle {
+  font-family: 'Roboto Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  color: #777777;
+}
+
+.title-comment {
+  font-family: 'Roboto Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 36px;
+  color: #474747;
 }
 
 .header-subtext {

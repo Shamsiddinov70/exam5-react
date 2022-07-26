@@ -1,16 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import Clock from "../assets/images/clock.svg"
 import { Link } from "react-router-dom"
-// import Comment from './Comment';
-// import Developers from "../assets/images/developers.jpg"
+
 
 function All() {
 
-    const handleChangerSide = () => {
-        console.log('hey');
-    }
-
     const [posts, setPosts] = useState([]);
+    // const [searchTerm, setSearchTerm] = useState("");
 
     useEffect(() => {
         (async function () {
@@ -38,7 +34,7 @@ function All() {
                             <span className='span-subtitle'>Design theory</span>
                         </div>
                         <li className='list-unstyled mb-3'>
-                            <Link onClick={handleChangerSide} className='title' to="/comment" key={post.id}>{post.title}</Link>
+                            <Link className='title' to="/comment" key={post.id}>{post.title}</Link>
                         </li>
 
                         <div className='d-flex align-items-center mb-3'>
