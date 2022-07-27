@@ -20,7 +20,12 @@ function App() {
     password: "1"
   }
 
-  const [user, setUser] = useState({ name: "", email: "" });
+  const localData = localStorage.getItem('token');
+  console.log(localData);
+  // const [token, setToken] = useState(localData ? JSON.parse(localData) : null);
+  // const [user, setUser] = useState(!localData ? JSON.parse(localData) : null);
+  const [user, setUser] = useState({ name: localData ? JSON.parse(localData) : null, email: localData ? JSON.parse(localData) : null });
+  // const [user, setUser] = useState({ name: "", email: "" });
   const [error, setError] = useState("");
 
   const Login = (details) => {
