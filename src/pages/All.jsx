@@ -1,16 +1,19 @@
 import React, { useEffect, useState } from 'react'
 import Clock from "../assets/images/clock.svg"
 import { Link } from "react-router-dom"
+import ReactPaginate from 'react-paginate';
 
 
 function All() {
 
     const [posts, setPosts] = useState([]);
-    // const [searchTerm, setSearchTerm] = useState("");
+    const [pageCount, setPageCount] = useState(0);
+
+    let limit = 10;
 
     useEffect(() => {
         (async function () {
-            const res = await fetch(`https://jsonplaceholder.typicode.com/posts`)
+            const res = await fetch(`https://jsonplaceholder.typicode.com/posts?_page=1&_limit=${limit}`)
             console.log(res);
 
             if (!res.ok) {
@@ -18,10 +21,30 @@ function All() {
             }
 
             const data = await res.json();
+            const total = res.headers.get('x-total-count')
+            setPageCount(Math.ceil(total / limit))
             setPosts(data)
         })()
-    }, [])
-    // console.log(posts);
+    }, [limit])
+
+    console.log(posts);
+
+    const fetchComments = async (currentPage) => {
+        const res = await fetch(`https://jsonplaceholder.typicode.com/posts?_page=${currentPage}&_limit=${limit}`)
+
+        const data = await res.json();
+        return data;
+    }
+
+    const handlePageClick = async (data) => {
+        console.log(data.selected);
+
+        let currentPage = data.selected + 1;
+
+        const commentsFormServer = await fetchComments(currentPage);
+
+        setPosts(commentsFormServer)
+    }
 
     return (
         <div className='posts'>
@@ -43,6 +66,27 @@ function All() {
                         </div>
                     </div>
                 ))}
+            </div>
+            <div>
+                <ReactPaginate
+                    previousLabel={'<'}
+                    nextLabel={'>'}
+                    breakLabel={'...'}
+                    pageCount={pageCount}
+                    marginPagesDisplayed={2}
+                    pageRangeDisplayed={3}
+                    onPageChange={handlePageClick}
+                    containerClassName={'pagination'}
+                    pageClassName={'page-item'}
+                    pageLinkClassName={'page-link'}
+                    previousClassName={'page-item'}
+                    previousLinkClassName={'page-link'}
+                    nextClassName={'page-item'}
+                    nextLinkClassName={'page-link'}
+                    breakClassName={'page-item'}
+                    breakLinkClassName={'page-link'}
+                    activeClassName={'active'}
+                />
             </div>
         </div >
     )
