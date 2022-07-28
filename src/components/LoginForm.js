@@ -20,7 +20,7 @@ function LoginForm({ Login, error }) {
                     flexDirection: 'column',
                     justifyContent: 'center',
                     alignItems: 'center',
-                    height: '100vh',
+                    marginTop: "70px",
                 }}>
                     <h2 className='login-title'>Login</h2>
                     <p style={{ 'color': 'red' }}>{error}</p>
