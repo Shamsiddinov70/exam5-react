@@ -1,13 +1,15 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
-import Search from "../assets/images/search.svg"
+
 
 function Header() {
 
-    // const handleInput = (e) => {
-    //     e.preventDefault()
-    //     console.log(e.target.value);
-    // }
+    // const handleFilterWord = (e) => {
+    //     let searchWord = e.target.value;
+    //     let newFilter = data.filter((value) => {
+    //         return post.title.includes(searchWord);
+    //     });
+    // };
 
     return (
         <div className='d-flex align-items-center header'>
@@ -21,10 +23,10 @@ function Header() {
                 </li>
             </ul>
 
-            <form className='d-flex'>
+            {/* <form className='d-flex'>
                 <input type={'search'} placeholder={'Search'} className='search-inp' />
-                <button title='Search' className="search-icon" type='search'><img src={Search} alt="search-icon" width={16} height={16} /></button>
-            </form>
+                <li title='Search' className="search-icon" type='search'><img src={Search} alt="search-icon" width={16} height={16} /></li>
+            </form> */}
         </div>
     )
 }

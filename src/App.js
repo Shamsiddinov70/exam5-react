@@ -20,12 +20,7 @@ function App() {
     password: "1"
   }
 
-  const localData = localStorage.getItem('token');
-  console.log(localData);
-  // const [token, setToken] = useState(localData ? JSON.parse(localData) : null);
-  // const [user, setUser] = useState(!localData ? JSON.parse(localData) : null);
-  const [user, setUser] = useState({ name: localData ? JSON.parse(localData) : null, email: localData ? JSON.parse(localData) : null });
-  // const [user, setUser] = useState({ name: "", email: "" });
+  const [user, setUser] = useState({ name: "", email: "" }); // asl holati
   const [error, setError] = useState("");
 
   const Login = (details) => {
@@ -45,9 +40,9 @@ function App() {
     }
   };
 
-  const Logout = () => {
-    setUser({ name: "", email: "" })
-  };
+  // const Logout = () => {
+  //   setUser({ name: "", email: "" })
+  // };
 
   return (
     <div className="App">
@@ -73,7 +68,7 @@ function App() {
                 </Routes>
 
               </div>
-              <button title='Logout' className='logout-btn btn btn-danger me-1' onClick={Logout}>out</button>
+              {/* <button title='Logout' className='logout-btn btn btn-danger me-1' onClick={Logout}>out</button> */}
             </div>
           </div>
           <Footer />

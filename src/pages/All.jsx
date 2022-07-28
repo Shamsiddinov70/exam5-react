@@ -2,9 +2,11 @@ import React, { useEffect, useState } from 'react'
 import Clock from "../assets/images/clock.svg"
 import { Link } from "react-router-dom"
 import ReactPaginate from 'react-paginate';
-
+import Search from "../assets/images/search.svg"
 
 function All() {
+
+    const [searchTerm, setSearchTerm] = useState('');
 
     const [posts, setPosts] = useState([]);
     const [pageCount, setPageCount] = useState(0);
@@ -48,9 +50,27 @@ function All() {
 
     return (
         <div className='posts'>
+
+            <form className='d-flex search-form justify-content-end'>
+                <input type={'search'} placeholder={'Search'} className='search-inp' onChange={event => { setSearchTerm(event.target.value) }} />
+
+                <li title='Search' className="search-icon" type='search'><img src={Search} alt="search-icon" width={16} height={16} /></li>
+            </form>
+
             <div class="posts-header">
                 <h1 className='heading'>Recent Posts</h1>
-                {posts.map(post => (
+                {posts.filter((val) => {
+                    if (searchTerm === '') {
+                        return val
+                    }
+
+                    else if (val.title.toLowerCase().includes(searchTerm.toLowerCase())) {
+                        return val
+                    }
+
+                    return false
+
+                }).map(post => (
                     <div className='post-title-wrapper border-bottom mb-5'>
                         <div className='d-flex spans'>
                             <span className='me-auto span-date'>September 24.2020</span>

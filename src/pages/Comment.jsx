@@ -2,10 +2,10 @@ import React, { useEffect, useState } from 'react'
 import Developers from "../assets/images/developers.jpg"
 import Clock from "../assets/images/clock.svg"
 import { Link, useParams } from "react-router-dom"
+import Search from "../assets/images/search.svg"
 
 function Comment() {
     const { postId } = useParams();
-    // console.log(params);
 
     const [post, setPost] = useState([]);
 
@@ -15,18 +15,18 @@ function Comment() {
             console.log(res);
 
             if (res.ok) {
-                // throw new Error(JSON.stringify(res));
                 return setPost(await res.json());
             }
 
-            // const data = await res.json();
-            // setPosts(data)
-            // console.log(data);
             console.log({ status: res.status, message: res.statusText });
         })()
     }, [postId])
     return (
         <div>
+            <form className='d-flex search-form justify-content-end'>
+                <input type={'search'} placeholder={'Search'} className='search-inp' />
+                <li title='Search' className="search-icon" type='search'><img src={Search} alt="search-icon" width={16} height={16} /></li>
+            </form>
             <div className="body">
                 <li className='list-unstyled'>
                     <p className='comment-subtitle'>User interface</p>

@@ -102,6 +102,14 @@
   margin-bottom: 28px;
 }
 
+/* .search-form {
+  position: absolute;
+  top: 26px;
+  right: 120px;
+  z-index: -1;
+  margin-left: 146px;
+} */
+
 .comment {
   font-family: 'Roboto Mono';
   font-style: normal;
@@ -151,11 +159,18 @@
   margin-right: 25px;
 }
 
-.logout-btn {
+/* .logout-btn {
   height: 40px;
   margin-top: 26px;
   text-align: center;
   padding: 2px;
+} */
+
+.search-form {
+  margin-top: -125px;
+  margin-bottom: 100px;
+  position: absolute;
+  right: 60px;
 }
 
 .search-inp {
@@ -170,7 +185,7 @@
   padding-top: 12px;
   padding-bottom: 12px;
   padding-left: 14px;
-  width: 256px;
+  width: 216px;
   border: none;
   outline: none;
   margin-left:35px;
@@ -182,7 +197,7 @@
   background: #FFBA9D;
   border-radius: 3px;
   padding: 12px;
-  margin-left: -75px;
+  /* margin-left: -75px; */
 }
 
 .accordion-button::after {
