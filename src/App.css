@@ -197,8 +197,21 @@
   background: #FFBA9D;
   border-radius: 3px;
   padding: 12px;
-  /* margin-left: -75px; */
 }
+
+@media only screen and (max-width: 1200px) {
+  .search-form {
+    display: block;
+      left: auto;
+      right: auto;
+      margin-top: -90px;
+  }
+
+  .search-inp {
+    margin-left: 0;
+  }
+}
+
 
 .accordion-button::after {
   display: none;

@@ -16,11 +16,11 @@ import Comment from './pages/Comment';
 function App() {
 
   const adminUser = {
-    email: "dev@gmail.com",
-    password: "1"
+    email: "eve.holt@reqres.in",
+    password: "777"
   }
 
-  const [user, setUser] = useState({ name: "", email: "" }); // asl holati
+  const [user, setUser] = useState({ name: "", email: "" });
   const [error, setError] = useState("");
 
   const Login = (details) => {
@@ -39,10 +39,6 @@ function App() {
       setError(`Xato ma'lumot😒`);
     }
   };
-
-  // const Logout = () => {
-  //   setUser({ name: "", email: "" })
-  // };
 
   return (
     <div className="App">

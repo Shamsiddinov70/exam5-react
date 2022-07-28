@@ -15,7 +15,6 @@ function Side() {
     const [count, seetCount] = useState(175)
 
     const handleCounter = () => {
-        // console.log('count');
         seetCount(count + 1);
     }
 
@@ -64,7 +63,6 @@ function Side() {
                     </div>
                 </div>
             </div>
-
         </>
     )
 }

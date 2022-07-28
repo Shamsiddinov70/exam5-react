@@ -51,7 +51,7 @@ function All() {
     return (
         <div className='posts'>
 
-            <form className='d-flex search-form justify-content-end'>
+            <form className='d-block d-flex search-form justify-content-end '>
                 <input type={'search'} placeholder={'Search'} className='search-inp' onChange={event => { setSearchTerm(event.target.value) }} />
 
                 <li title='Search' className="search-icon" type='search'><img src={Search} alt="search-icon" width={16} height={16} /></li>
