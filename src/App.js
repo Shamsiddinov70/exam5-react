@@ -16,8 +16,8 @@ import Comment from './pages/Comment';
 function App() {
 
   const adminUser = {
-    email: "",
-    password: ""
+    email: "a@gmail.com",
+    password: "1"
   }
 
   const [user, setUser] = useState({ name: "", email: "" });
