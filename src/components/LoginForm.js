@@ -26,11 +26,11 @@ function LoginForm({ Login, error }) {
                     <p style={{ 'color': 'red' }}>{error}</p>
                     <div className='form-group'>
                         {/* <label htmlFor='email'>Email:</label> */}
-                        <input placeholder='Email' className='input' type="email" name="email" id="email" onChange={e => setDetails({ ...details, email: e.target.value })} value={details.email}></input>
+                        <input placeholder='Email -> a@gmail.com' className='input' type="email" name="email" id="email" onChange={e => setDetails({ ...details, email: e.target.value })} value={details.email}></input>
                     </div>
                     <div className='form-group'>
                         {/* <label htmlFor='password'>Password:</label> */}
-                        <input placeholder='Password' className='input' type="password" name="password" id="password" onChange={e => setDetails({ ...details, password: e.target.value })} value={details.password}></input>
+                        <input placeholder='Password -> 1' className='input' type="password" name="password" id="password" onChange={e => setDetails({ ...details, password: e.target.value })} value={details.password}></input>
                     </div>
                     <button className='submit-btn' type='submit' value="LOGIN">Submit</button>
                 </div>
